@@ -1,0 +1,82 @@
+body{
+	
+background-color: #FFEBCD;
+	
+}
+
+
+
+a:link{
+	color: red; 
+}
+a:visited{
+	color: #191970;
+}
+a:hover{
+	color: green; 
+}
+
+nav a{
+	 float: left; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; 
+  font-size: 17px;
+  background-color: #FF8C00;
+}
+
+nav a:hover{
+	background-color: #ddd; 
+	color: blue; 
+}
+nav a.active{
+	background-color: #d2691e;
+	color: #fff8dc;
+}
+
+.site-footer{
+	background-color: #B0E0E6;
+	color: white;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	flex-grow: 0;
+	flex-shrink: 0;
+	justify-content: center;
+	
+}
+
+.body_wrapper{
+	box-sizing: border-box;
+	min-height: 100%;
+	
+	display: flex; 
+	flex-direction: column; 
+}
+
+html, body{
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.page-body {
+  padding: 20px;
+
+  flex-grow: 1;
+}
+
+
+::-webkit-scrollbar{
+	width: 36px;
+}
+::-webkit-scrollbar-track{
+	background: #000; 
+	border-radius: 20px; 
+}
+::-webkit-scrollbar-thumb{
+	background: #d2691e;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: #a0522d; 
+}

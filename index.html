@@ -5,10 +5,10 @@
 		
 		<!-- Metadata -->
 		<meta name="author" content="Tristan Geary">
-		<meta name="description" content="Lab2 webpage assignment">
+		<meta name="description" content="lab3 assignment index.html page">
 		<meta charset="UTF-8">
 		<meta name="keywords" content="html">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		
 		<!-- defining style for table -->
@@ -19,10 +19,30 @@
 			}
 		</style>
 		
+		<!-- linking external css sheet-->
+		<link rel="stylesheet" href="my_style.css">
+		
 		
     </head>
 	
     <body>
+	
+	
+		
+		
+		<div class="body_wrapper">
+		
+		<main class="page-body">
+		
+		
+		<h3>Quick Links</h3>
+		<nav>
+		<a href="index.html" class="active">Tristan Geary</a> 
+		<a href="my_vacation.html">My Vacation</a> 
+		<a href="my_artistic_self.html">My Artistic Self</a>
+		</nav>
+		
+		<br><br><br>
 		
 		<!-- academic information as headers -->
 		<div>
@@ -64,30 +84,30 @@
 		<!-- table detailing schools attended, favorite classes, and year graduated -->
 		<div>
 		<h2>Schools attended, favorite class, and year graduated:</h2>
-        <table style="width:50%">
+        <table style="width:50%; text-align: center;">
 			
 			
 		
-			<tr>
+			<tr style="background-color: blue;">
 				<th>School</th>
 				<th>Favorite Class</th>
 				<th>Year Graduated</th>
 			</tr>
 			
 			<tr>
-				<td>Norwin Middle School</td>
-				<td>Algera 1</td>
+				<td style="font-family: Fantasy;">Norwin Middle School</td>
+				<td>Algebra 1</td>
 				<td>2018</td>
 			</tr>
 			
 			<tr>
-				<td>Penn-Trafford High School</td>
+				<td style="font-family: Fantasy;">Penn-Trafford High School</td>
 				<td>Anatomy &amp Physiology</td>
 				<td>2022</td>
 			</tr>
 		
 			<tr>
-				<td>Bishop's University</td>
+				<td style="font-family: Fantasy;">Bishop's University</td>
 				<td>Brain &amp Behavior II</td>
 				<td>2026</td>
 			</tr>
@@ -100,6 +120,25 @@
 		<!--Link to dream vacation website -->
 		<div>
 		<p><em><b>My Dream Vacation: </b></em></p><a href="my_vacation.html">My Dream Vacation</a>
+		</div>
+		
+		
+		<!--Link to My Artistic self website-->
+		<div>
+		<p><em><b>My Artistic Self:</b></em></p>
+		<a href="my_artistic_self.html">My Artistic Self Page</a>
+		</div>
+		
+		
+		
+		
+		</main>
+		
+		
+		<footer class="site-footer">
+			This is for my CS203 Lab.
+		</footer>
+		
 		</div>
 		
     </body>
