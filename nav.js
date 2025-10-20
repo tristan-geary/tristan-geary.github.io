@@ -1,5 +1,3 @@
-console.log("nav.js loaded successfully");
-
 function splitAtRoot(path){
     const url = new URL(path, location.origin);
     const pathFromRoot = url.pathname;
@@ -21,7 +19,7 @@ function setNav(current_path){
 			if (child instanceof HTMLAnchorElement) {
 				let child_path = splitAtRoot(child.href); 
 				
-				if(child_path == current_path){
+				if(child_path === current_path){
 					child.classList.add("current_page");
 				}
 			}
