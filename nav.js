@@ -1,3 +1,5 @@
+console.log("nav.js loaded successfully");
+
 function splitAtRoot(path){
     const url = new URL(path, location.origin);
     const pathFromRoot = url.pathname;
