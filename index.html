@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+	
+		<!--linking javascript nav.js-->
+		<script src="nav.js" ></script>
+		
+			
+			
         <title>Tristan Geary</title>
 		
 		<!-- Metadata -->
@@ -35,16 +41,12 @@
 		<main class="page-body">
 		
 		
-		<h3>Quick Links</h3>
-		<nav>
-		<a href="index.html" class="active">Tristan Geary</a> 
-		<a href="my_vacation.html">My Vacation</a> 
-		<a href="my_artistic_self.html">My Artistic Self</a>
-		<a href="marketplace.html">Marketplace</a>
-		<a href="calculators.html">Calculators</a>
+		<nav id="main-nav"></nav>
+			<script>
+			const current_path = location.pathname;
+			setNav(current_path)
+			</script>
 
-
-		</nav>
 		
 		<br><br><br>
 		
@@ -85,41 +87,7 @@
 		</div>
 		<hr>
 		
-		<!-- table detailing schools attended, favorite classes, and year graduated -->
-		<div>
-		<h2>Schools attended, favorite class, and year graduated:</h2>
-        <table style="width:50%; text-align: center;">
-			
-			
 		
-			<tr style="background-color: blue;">
-				<th>School</th>
-				<th>Favorite Class</th>
-				<th>Year Graduated</th>
-			</tr>
-			
-			<tr>
-				<td style="font-family: Fantasy;">Norwin Middle School</td>
-				<td>Algebra 1</td>
-				<td>2018</td>
-			</tr>
-			
-			<tr>
-				<td style="font-family: Fantasy;">Penn-Trafford High School</td>
-				<td>Anatomy &amp Physiology</td>
-				<td>2022</td>
-			</tr>
-		
-			<tr>
-				<td style="font-family: Fantasy;">Bishop's University</td>
-				<td>Brain &amp Behavior II</td>
-				<td>2026</td>
-			</tr>
-			
-			
-		</table>
-		
-		</div>
 		
 		<!--Link to dream vacation website -->
 		<div>
