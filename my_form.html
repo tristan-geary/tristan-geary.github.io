@@ -103,6 +103,32 @@
 			return false; 
 		}
 		
+		const time_option = document.querySelector('input[name="time"]:checked');
+		if(!time_option){
+			window.alert("Answer Question 2: When do you feel most productive?");
+			return false; 
+		}
+		
+		const learner_option = document.querySelector('input[name="learner"]:checked');
+		if(!learner_option){
+			window.alert("Answer Question 3: Select at least one learning style.");
+			return false; 
+		}
+		
+		const deadline_option = document.querySelector('input[name="deadline"]:checked');
+		if(!time_option){
+			window.alert("Answer Question 4: How do you handle deadlines?");
+			return false; 
+		}
+		
+		const reward_option = document.querySelector('input[name="reward"]:checked');
+		if(!time_option){
+			window.alert("Answer Question 5: How do you reward yourself after exams?");
+			return false; 
+		}
+		
+		
+		
 		window.alert("Thank you for completing the quiz, " + name + "!"); 
 		return true;
 	}
