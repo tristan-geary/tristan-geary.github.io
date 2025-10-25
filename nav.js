@@ -30,6 +30,6 @@ function setNav(current_path){
 			}
 		
 		
-		});
+		})
 		.catch(error => console.error("error loading nav:", error)); 
 }
