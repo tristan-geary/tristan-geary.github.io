@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+		<!-- metadata -->
+		<meta name="author" content="Tristan Geary">
+		<meta name="Description" content="My ideal Vacation Spot">
+		<meta name="keywords" content="html">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--linking external css-->
+		<link rel="stylesheet" href="my_style.css">
+		
+		<title>Personlity Quiz</title>
+		
+		<script src="nav.js" href="my_style.css"></script>
+</head>
+<body>
+	
+	
+	<nav id="main-nav"></nav>
+	<script>
+	const current_path = location.pathname;
+	setNav(current_path);
+	</script>
+	
+	<main class="page-body">
+	<h1>What Type of Student Are You?</h1>
+	
+	<form id="quiz-form" onsubmit="return validate(event)">
+		<fieldset>
+			<legend>Personality Quiz</legend>
+			
+			<label for="name">Your Name:</label>
+			<br>
+			<input type="text" id="name" name="name" placeholder="Enter your name">
+			<br><br>
+			
+			<label for="email">Your Email:</label>
+			<br>
+			<input type="email" id="email" name="email" placeholder="you@example.com">
+			<br><br>
+			
+			<!--Question 1-->
+			<p>1. How do you prefer to study?</p>
+			<label><input type="radio" name="study" value="alone"> Alone</label><br>
+			<label><input type="radio" name="study" value="group"> In a group</label><br>
+			<label><input type="radio" name="study" value="tutor"> With a tutor</label><br><br>
+			
+			<!--Question 2-->
+			<p>2. When do you feel the most productive?</p>
+			<label><input type="radio" name="time" value="morning"> Morning </label><br>
+			<label><input type="radio" name="time" value="afternoon"> Afternoon </label><br>
+			<label><input type="radio" name="time" value="night"> Night </label><br><br>
+			
+			<!--Question 3-->
+			<p>3. What kind of learner are you?</p>
+			<label><input type="checkbox" name="learner" value="visual"> Visual</label><br>
+			<label><input type="checkbox" name="learner" value="auditory"> Auditory</label><br>
+			<label><input type="checkbox" name="learner" value="kinesthetic"> Kinesthetic</label><br><br>
+			
+			<!--Question 4-->
+			<p>4. How do you handle deadlines?</p>
+			<label><input type="radio" name="deadline" value="early"> Finish Early</label><br>
+			<label><input type="radio" name="deadline" value="lastminute"> Work Best Under Pressure</label><br>
+			<label><input type="radio" name="deadline" value="balanced"> Plan Steadily</label><br><br>
+			
+			<!--Question 5-->
+			<p>5. How do you reward yourself after exams?</p>
+			<label><input type="checkbox" name="reward" value="nap"> Long Nap</label><br>
+			<label><input type="checkbox" name="reward" value="food"> Nice Meal</label><br>
+			<label><input type="checkbox" name="reward" value="friends"> Hang Out With Friends</label><br>
+			<label><input type="checkbox" name="reward" value="shopping"> Shopping</label><br><br>
+			
+			<input type="submit" value="Submit Quiz">
+			
+			</fieldset>
+		</form>
+	</main>
+	
+	
+	<script>
+	function validate(event){
+		event.preventDefault(); 
+		
+		const name = document.getElementById("name").value.trim(); 
+		const email = document.getElementById("email").value.trim();
+		
+		if(name === ""){
+			window.alert("Please enter your name before submitting"); 
+			return false; 
+		}
+			
+		if(email === ""){
+			window.alert("Please enter your email before submitting"); 
+			return false; 
+		}
+			
+		const study_option = document.querySelector('input[name="study"]:checked');
+		if(!study_option){
+			window.alert("Answer Question 1: How do you prefer to study?); 
+			return false; 
+		}
+		
+		window.alert("Thank you for completing the quiz, " + name + "!"); 
+		return true;
+	}
+	</script>
+
+
+</body>
+
+
+
+</html>
