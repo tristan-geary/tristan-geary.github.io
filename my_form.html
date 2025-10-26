@@ -18,7 +18,7 @@
 </head>
 <body>
 	
-	
+	<!--calling the nav-->
 	<nav id="main-nav"></nav>
 	<script>
 	const current_path = location.pathname;
@@ -74,17 +74,19 @@
 			<label><input type="checkbox" name="reward" value="friends"> Hang Out With Friends</label><br>
 			<label><input type="checkbox" name="reward" value="shopping"> Shopping</label><br><br>
 			
+			<!--Submit button-->
 			<input type="submit" value="Submit Quiz">
 			
 			</fieldset>
 		</form>
 	</main>
 	
+	<!--Footer-->
 	<footer class="site-footer">
 	<p>This is for my CS203 Lab.</p>
 	</footer>
 	
-	
+	<!--javascript for form-->
 	<script>
 	function validate(event){
 		event.preventDefault(); 
@@ -92,40 +94,41 @@
 		const name = document.getElementById("name").value.trim(); 
 		const email = document.getElementById("email").value.trim();
 		
+		//validating name
 		if(name === ""){
 			window.alert("Please enter your name before submitting"); 
 			return false; 
 		}
-			
+		//validating email	
 		if(email === ""){
 			window.alert("Please enter your email before submitting"); 
 			return false; 
 		}
-			
+		///validating question 1	
 		const study_option = document.querySelector('input[name="study"]:checked');
 		if(!study_option){
 			window.alert("Answer Question 1: How do you prefer to study?"); 
 			return false; 
 		}
-		
+		//validating question 2
 		const time_option = document.querySelector('input[name="time"]:checked');
 		if(!time_option){
 			window.alert("Answer Question 2: When do you feel most productive?");
 			return false; 
 		}
-		
+		//validating question 3
 		const learner_option = document.querySelector('input[name="learner"]:checked');
 		if(!learner_option){
 			window.alert("Answer Question 3: Select at least one learning style.");
 			return false; 
 		}
-		
+		//validating question 4
 		const deadline_option = document.querySelector('input[name="deadline"]:checked');
 		if(!deadline_option){
 			window.alert("Answer Question 4: How do you handle deadlines?");
 			return false; 
 		}
-		
+		//validating question 5
 		const reward_option = document.querySelector('input[name="reward"]:checked');
 		if(!reward_option){
 			window.alert("Answer Question 5: How do you reward yourself after exams?");
@@ -133,7 +136,7 @@
 		}
 		
 		
-		
+		///all checks passed
 		window.alert("Thank you for completing the quiz, " + name + "!"); 
 		return true;
 	}
