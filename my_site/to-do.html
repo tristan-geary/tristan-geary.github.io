@@ -2,7 +2,8 @@
 
 <html>
 <head>
-		
+	
+	<!--metadata-->
 	<meta name="author" content="Tristan Geary">
 	<meta name="Description" content="to-do list">
 	<meta name="keywords" content="html">
@@ -11,8 +12,9 @@
 	
 	<title>To-Do List</title>
 	
+	<!--css stylesheet-->
 	<link rel="stylesheet" href="my_style.css">
-	
+	<!--link to font-awesome-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	
 	
@@ -20,8 +22,11 @@
 
 <body>
 	
+	<!--main container wrapping entire content-->
 	<div class="body_wrapper">
 	
+	
+	<!--nav bar holder and dynamically generating/handling nav-->
 	<nav id="main-nav"></nav>
 	<script src="nav.js"></script>
 	<script>
@@ -29,15 +34,18 @@
 		setNav(current_path); 
 	</script>
 	
+	<!--main content area-->
 	<main class="page-body">
 		<div class="todo-wrapper">
 			<br><h1>My To-do List</h1>
 			
+			<!--form for to do items-->
 			<form id="todo-form">
 				<input id="new-item" type="text" value="Enter a new to-do item">
 				<button id="add_button" type="submit">Add to list</button>
 			</form>
 			
+			<!--unordered list to display items-->
 			<ul id="todo-list"></ul>
 		</div>
 	</main>
@@ -57,6 +65,7 @@
 		const input = document.getElementById("new-item");
 		const list = document.getElementById("todo-list");
 		
+		//form submission handling
 		form.addEventListener("submit", function(e) { 
 			
 			e.preventDefault();
@@ -81,14 +90,16 @@
 			input.focus(); 
 		}); 
 
-		
+		//render the full list from array
 		function renderList(){
 			list.innerHTML = ""; 
 			items.forEach(item => renderItem(item.text, item.id));
 		 }
 		 
+		//render a single to do item 
 		function renderItem(item_text, id){
 			const li = document.createElement("li"); 
+			//store id for later reference
 			li.dataset.id = id; 
 			
 			const spanText = document.createElement("span"); 
@@ -100,6 +111,7 @@
 			trash.setAttribute("role", "button"); 
 			trash.setAttribute("aria-label", "Delete item"); 
 			
+			//click handler to delete item
 			trash.addEventListener("click", () => { 
 				li.remove(); 
 				const numericId= Number(li.dataset.id); 
