@@ -2,6 +2,9 @@
 <html>
 <head>
 
+		<!--linking javascript nav.js-->
+		<script src="nav.js"></script>
+		
 		<!--metadata-->
 		<meta name="author" content="Tristan Geary">
 		<meta name="description" content="lab3 artistic self page">
@@ -27,18 +30,13 @@
 
 </head>
 <body>
+	<!--calling the nav-->
+	<nav id="main-nav"></nav>
+	<script>
+	const current_path = location.pathname;
+	setNav(current_path);
+	</script>
 
-	<h3>Quick Links</h3>
-	
-	<nav>
-	
-		<a href="index.html">Tristan Geary</a> 
-		<a href="my_vacation.html">My Vacation</a> 
-		<a href="my_artistic_self.html">My Artistic Self</a>
-		<a href="marketplace.html" class="active">Marketplace</a>
-		<a href="calculators.html">Calculators</a>
-
-	</nav>
 	
 	<br><br><br>
 	

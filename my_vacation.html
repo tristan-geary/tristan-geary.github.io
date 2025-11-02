@@ -2,7 +2,10 @@
 <html>
 
 	<head>
-	
+		
+		<!--linking javascript nav.js-->
+		<script src="nav.js"></script>
+		
 		<title>My Vacation</title>
 	
 		<!-- metadata -->
@@ -23,23 +26,17 @@
 	
 	<main class="page-body">
 	
-	
-	<h3>Quick Links</h3>
-	
-	<nav>
-	
-		<a href="index.html">Tristan Geary</a> 
-		<a href="my_vacation.html" class="active">My Vacation</a> 
-		<a href="my_artistic_self.html">My Artistic Self</a>
-		<a href="marketplace.html">Marketplace</a>
-		<a href="calculators.html">Calculators</a>
+	<!--calling the nav-->
+	<nav id="main-nav"></nav>
+	<script>
+	const current_path = location.pathname;
+	setNav(current_path);
+	</script>
 
-		
-	</nav>
+	
 	
 	<br><br><br>
-	<!-- header and info -->
-	
+	<!-- header-->
 	<div>
 	<h1>My Ideal Vacation</h1>
 	
