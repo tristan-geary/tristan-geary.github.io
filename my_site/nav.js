@@ -41,7 +41,7 @@ function setNav(current_path){
 					
 					//if it is current page, highlight it
 					if(isCurrentPage){
-						child.classList.add("current_page");
+						child.classList.add("active");
 					}
 				}
 			}
