@@ -25,11 +25,11 @@ if (isset($_POST['password'])) {
 			
         } else if ($_SERVER['SERVER_NAME'] === 'osiris.ubishops.ca') {
 			
-            $BASE_URL = $_SERVER['HTTP_HOST'] . '/tgeary/';
+            $BASE_URL = $_SERVER['HTTP_HOST'] . '/~tgeary/my_files/';
 			
         } else {
 			
-            $BASE_URL = $_SERVER['HTTP_HOST'];
+            $BASE_URL = $_SERVER['HTTP_HOST'] . '/';
         }
         
         header('Location: http://' . $BASE_URL . 'to-do.php');
