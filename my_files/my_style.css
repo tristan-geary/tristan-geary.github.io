@@ -17,7 +17,7 @@ a:hover{
 	color: green; 
 }
 
-nav a{
+/*nav a{
 	 float: left; 
   text-align: center;
   padding: 14px 16px;
@@ -34,6 +34,7 @@ nav a.active{
 	background-color: #d2691e;
 	color: #fff8dc;
 }
+*/
 
 .site-footer{
 	background-color: #B0E0E6;
@@ -198,3 +199,156 @@ legend{
 		padding: 8px 12px; 
 	}
 }
+
+
+.topnav {
+  background-color: #ff8c00;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 20px; 
+  padding: 0 20px;
+}
+
+
+#myLinks {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+
+.topnav a, .topnav .dropbtn {
+  color: white !important;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.topnav a:link, .topnav a:visited {
+  color: white;
+}
+
+.topnav a:hover,
+.topnav .dropbtn:hover,
+.dropdown-content a:hover {
+  background-color: #ffd9b3;
+  color: black;
+}
+
+.topnav a.active,
+.topnav .dropbtn.active {
+  background-color: #d2691e;
+  color: #fff8dc;
+}
+
+
+.nav-logo {
+  height: 48px;
+  width: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+
+.dropdown {
+  position: relative; 
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #ff8c00;
+  min-width: 180px;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.topnav .icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  padding: 8px 10px;
+  cursor: pointer;
+  margin-left: auto; 
+}
+
+
+@media screen and (max-width: 700px) {
+
+  #myLinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+  }
+
+ 
+  #myLinks a,
+  #myLinks .dropdown,
+  .topnav .dropbtn {
+    display: block;
+    padding: 12px 16px;
+    text-align: left;
+    width: 100%;
+  }
+
+  
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+    min-width: 100%;
+  }
+
+  
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  
+  .topnav .icon {
+    display: block;
+  }
+
+  
+  .nav-logo {
+    height: 40px;
+  }
+}
+

@@ -1,10 +1,10 @@
+<?php $current_page = 'my_vacation'; ?>
 <!DOCTYPE html>
 <html>
 
 	<head>
 		
-		<!--linking javascript nav.js-->
-		<script src="nav.js"></script>
+
 		
 		<title>My Vacation</title>
 	
@@ -18,20 +18,16 @@
 
 		<!--linking external css-->
 		<link rel="stylesheet" href="my_style.css">
+		<script src="nav_menu.js"></script>
 	
 	</head>
 	
 	<body>
 	<div class="body_wrapper">
-	
+	<?php include 'nav.php'?>
 	<main class="page-body">
 	
-	<!--calling the nav-->
-	<nav id="main-nav"></nav>
-	<script>
-	const current_path = location.pathname;
-	setNav(current_path);
-	</script>
+	
 
 	
 	
@@ -60,9 +56,7 @@
 	
 	</main>
 	
-	<footer class="site-footer">
-	<p>This is for my CS203 Lab.</p>
-	</footer>
+	<?php include 'footer.php' ?>
 	
 
 	</div>

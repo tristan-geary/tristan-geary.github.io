@@ -1,9 +1,9 @@
+<?php $current_page = 'index'; ?>
 <!DOCTYPE html>
 <html>
     <head>
 	
-		<!--linking javascript nav.js-->
-		<script src="nav.js"></script>
+		
 		
 			
 			
@@ -28,7 +28,7 @@
 		<!-- linking external css sheet-->
 		<link rel="stylesheet" href="my_style.css">
 		
-		
+		<script src="nav_menu.js"></script>
     </head>
 	
     <body>
@@ -37,16 +37,10 @@
 		
 		
 		<div class="body_wrapper">
-		
+		<?php include 'nav.php';?>
 		<main class="page-body">
 		
-		<!--calling the nav-->
-		<nav id="main-nav"></nav>
-		<script>
-			const current_path = location.pathname;
-			setNav(current_path);
-		</script>
-
+		
 		
 		<br><br><br>
 		
@@ -92,14 +86,14 @@
 		
 		<!--Link to dream vacation website -->
 		<div>
-		<p><em><b>My Dream Vacation: </b></em></p><a href="my_vacation.html">My Dream Vacation</a>
+		<p><em><b>My Dream Vacation: </b></em></p><a href="my_vacation.php">My Dream Vacation</a>
 		</div>
 		
 		
 		<!--Link to My Artistic self website-->
 		<div>
 		<p><em><b>My Artistic Self:</b></em></p>
-		<a href="my_artistic_self.html">My Artistic Self Page</a>
+		<a href="my_artistic_self.php">My Artistic Self Page</a>
 		</div>
 		
 		
@@ -142,9 +136,7 @@
 		
 		</main>
 		
-		<footer class="site-footer">
-			This is for my CS203 Lab.
-		</footer>
+		<?php include 'footer.php' ?>
 		
 		
 		
