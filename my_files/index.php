@@ -105,14 +105,92 @@
 		
 		
 		
-		</main>
 		
+		
+		
+		
+		
+		
+		<div class="slideshow">
+			
+			<!--running image-->
+			<div class="slideshow_img">
+				
+				<img src="images/running.jpg" alt="Running image" >
+			
+			</div>
+			
+			<!--steelers image-->
+			<div class="slideshow_img">
+				
+				<img src="images/steel_curtain.jpg" alt="Steeler's steel curtain">
+			
+			</div>
+			
+			<!--medicine image-->
+			<div class="slideshow_img">
+		
+				<img src="images/medicine.jpg" alt="Medicine image">
+			
+			</div>
+				
+			<!--next and prev buttons-->
+			<a id="prev" onclick="previous()">Previous</a>
+			<a id="next" onclick="next()">Next</a>
+			
+		</div>
+		
+		</main>
 		
 		<footer class="site-footer">
 			This is for my CS203 Lab.
 		</footer>
 		
-		</div>
+		
+		
+		<script>
+			let current_slide = 0; 
+			showSlide(current_slide); 
+			
+			//function to go to previous image
+			function previous(){
+				current_slide--;
+				const slides = document.getElementsByClassName("slideshow_img");
+				//handling logic case if we go under 0
+				if(current_slide < 0){
+				
+				current_slide = slides.length - 1; 
+			}
+				showSlide(current_slide);
+			}
+			
+			//function for next image
+			function next(){
+				current_slide++;
+				const slides = document.getElementsByClassName("slideshow_img");
+				//handling logic case if we go over the amount of slides
+				if(current_slide >= slides.length){
+					current_slide=0;
+				}
+				
+				showSlide(current_slide); 
+			}
+			//function to show slide
+			function showSlide(n){
+				const slides = document.getElementsByClassName("slideshow_img");
+				
+				for(let i=0; i<slides.length; i++){
+					
+					///hide it
+					slides[i].style.display = "none"; 
+				}
+					///show it
+					slides[n].style.display = "block"; 
+			
+			}
+			
+			
+		</script>
 		
     </body>
 	
