@@ -37,7 +37,7 @@
 		
 		
 		<div class="body_wrapper">
-		<?php include 'nav.php';?>
+		<?php include 'includes/nav.php';?>
 		<main class="page-body">
 		
 		
@@ -136,7 +136,7 @@
 		
 		</main>
 		
-		<?php include 'footer.php' ?>
+		<?php include 'includes/footer.php' ?>
 		
 		
 		

@@ -19,8 +19,7 @@
 </head>
 <body>
 	
-	<?php include 'nav.php' ?>
-	
+<?php include 'includes/nav.php'; ?>	
 	<main class="page-body">
 	<br>
 	<h1>What Type of Student Are You?</h1>
@@ -77,7 +76,7 @@
 	</main>
 	
 	<!--Footer-->
-	<?php include 'footer.php' ?>
+	<?php include 'includes/footer.php' ?>
 	
 	<!--javascript for form-->
 	<script>

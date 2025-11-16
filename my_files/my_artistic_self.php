@@ -104,7 +104,7 @@
 	<body>
 	
 	<div class="body_wrapper">
-	<?php include 'nav.php' ?>
+	<?php include 'includes/nav.php'; ?>	
 	<!--Header-->
 	<h1>My Artistic Self</h1>
 	<main class="page-body">
@@ -147,7 +147,7 @@
 	
 	</main>
 	
-	<?php include 'footer.php' ?>
+	<?php include 'includes/footer.php' ?>
 	
 	</div>
 

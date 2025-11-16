@@ -1,4 +1,17 @@
-<?php $current_page = 'to-do'; ?>
+<?php 
+
+	include "includes/config.php";
+	session_start();
+	if (!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] !== true) {
+    header("Location: login.php");
+    exit();
+	}
+	
+	
+	$current_page = 'to-do'; 
+	
+	$username = $_COOKIE["to-do-username"]?? "Guest";
+?>
 <!DOCTYPE html>
 
 <html>
@@ -27,10 +40,18 @@
 	<div class="body_wrapper">
 	
 	
-	<?php include 'nav.php'?>
 	
+	<?php include 'includes/nav.php'; ?>	
+	
+	<form action="login.php" method="POST" style="position: relative;">
+		<button type="submit" name="logout" value="true" style="position: absolute; top: 10px; right: 10px;">
+		Log out</button>
+	</form>
+			
 	<!--main content area-->
 	<main class="page-body">
+	
+		<h1>Welcome Back, <?php echo $username;?>!</h1>
 		<div class="todo-wrapper">
 			<br><h1>My To-do List</h1>
 			
@@ -45,7 +66,7 @@
 		</div>
 	</main>
 	
-	<?php include 'footer.php' ?>
+	<?php include 'includes/footer.php' ?>
 	
 	</div>
 	
