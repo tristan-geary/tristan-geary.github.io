@@ -156,8 +156,7 @@ $results_info = [
 	
 	<div class="body_wrapper">
 	<!--linking the actual nav-->
-    <?php include 'nav.php'; ?>
-
+	<?php include 'includes/nav.php'; ?>
 	
     <main class="page-body" style="text-align: center;">
         <br>
@@ -190,7 +189,7 @@ $results_info = [
 		
     </main>
 
-    <?php include 'footer.php'; ?>
+	<?php include 'includes/footer.php' ?>
 	</div>
 </body>
 </html>
