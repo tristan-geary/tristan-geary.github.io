@@ -1,3 +1,4 @@
+<?php $current_page = 'to-do'; ?>
 <!DOCTYPE html>
 
 <html>
@@ -17,7 +18,7 @@
 	<!--link to font-awesome-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	
-	
+	<script src="nav_menu.js"></script>
 </head>
 
 <body>
@@ -26,13 +27,7 @@
 	<div class="body_wrapper">
 	
 	
-	<!--nav bar holder and dynamically generating/handling nav-->
-	<nav id="main-nav"></nav>
-	<script src="nav.js"></script>
-	<script>
-		const current_path = location.pathname; 
-		setNav(current_path); 
-	</script>
+	<?php include 'nav.php'?>
 	
 	<!--main content area-->
 	<main class="page-body">
@@ -50,9 +45,7 @@
 		</div>
 	</main>
 	
-	<footer class="site-footer">
-		<p>This is for my CS203 Lab.</p>
-	</footer>
+	<?php include 'footer.php' ?>
 	
 	</div>
 	

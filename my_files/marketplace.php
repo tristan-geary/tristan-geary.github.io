@@ -1,9 +1,9 @@
+<?php $current_page = 'marketplace'; ?>
 <!DOCTYPE html>
 <html>
 <head>
 
-		<!--linking javascript nav.js-->
-		<script src="nav.js"></script>
+		
 		
 		<!--metadata-->
 		<meta name="author" content="Tristan Geary">
@@ -27,22 +27,23 @@
 
 
 
-
+		<script src="nav_menu.js"></script>
 </head>
 <body>
-	<!--calling the nav-->
-	<nav id="main-nav"></nav>
-	<script>
-	const current_path = location.pathname;
-	setNav(current_path);
-	</script>
 
+	<div class="body_wrapper">
+	<?php include 'nav.php' ?>
+	<main class="page-body">
 	
 	<br><br><br>
 	
 	
 	<!--Linking javascript-->
 	<script src="1-marketplace.js"></script>
+	</main>
+	
+	<?php include 'footer.php'?>
+	</div>
 	
 </body>
 </html>

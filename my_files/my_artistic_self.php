@@ -1,11 +1,11 @@
+<?php $current_page = 'my_artistic_self'; ?>
 <!DOCTYPE html>
 
 <html>
 
 	<head>
 	
-		<!--linking javascript nav.js-->
-		<script src="nav.js"></script>
+		
 		
 		<!--metadata-->
 		<meta name="author" content="Tristan Geary">
@@ -36,7 +36,7 @@
 			h1{
 				color: powderBlue; 
 				text-align: center;
-				background-color: orange; 
+				
 			}
 			
 			.keyword{
@@ -96,7 +96,7 @@
 			
 		</style>
 	
-	
+		<script src="nav_menu.js"></script>
 	</head>
 	
 	
@@ -104,23 +104,19 @@
 	<body>
 	
 	<div class="body_wrapper">
-	
+	<?php include 'nav.php' ?>
+	<!--Header-->
+	<h1>My Artistic Self</h1>
 	<main class="page-body">
 	
-	<!--calling the nav-->
-	<nav id="main-nav"></nav>
-		<script>
-		const current_path = location.pathname;
-		setNav(current_path);
-		</script>
+	
 
 	
 	
 	
 	<br><br><br>
 	
-	<!--Header-->
-	<h1>My Artistic Self</h1>
+	
 	
 	
 	<!--link back to index.html-->
@@ -151,9 +147,7 @@
 	
 	</main>
 	
-	<footer class="site-footer">
-	<p>This is for my CS203 Lab</p>
-	</footer>
+	<?php include 'footer.php' ?>
 	
 	</div>
 
