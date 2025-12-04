@@ -3,6 +3,8 @@
 	include "includes/config.php";
 	session_start();
 	
+	$from = $_GET['from'] ?? $_POST['from']?? ''; 
+	
 	///messages
 	$logout_msg = ""; 
 	$error_msg = ""; 
@@ -33,7 +35,11 @@
 	
 	///if already logged in, go straight to to-do page
 	if (!isset($_POST['logout']) && isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
-    header("Location: to-do.php");
+		if($from === 'blog'){
+			header("Location: blog.php"); 
+		} else {
+			header("Location: to-do.php");
+		}
     exit();
 }
 	
@@ -147,8 +153,14 @@ if (isset($_POST['password'])) {
 		
 		//setting user to logged in state
         $_SESSION['is_logged_in'] = true;
-        header('Location: http://' . $BASE_URL . 'to-do.php');
 		
+		if($from === 'blog'){
+			header('Location: http://' .$BASE_URL . 'blog.php'); 
+		}else{
+			
+			header('Location: http://' . $BASE_URL . 'to-do.php');
+		
+		}
         exit();
 	}
 }
@@ -208,6 +220,8 @@ $current_page = 'login';
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
+			
+			<input type="hidden" name="from" value="<?php echo htmlspecialchars($from);?>">
             <br>
             <input type="submit" value="Login">
         </form>

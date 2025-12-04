@@ -8,13 +8,13 @@ background-color: #FFEBCD;
 
 
 a:link{
-	color: red; 
+	color: #191970; 
 }
 a:visited{
 	color: #191970;
 }
 a:hover{
-	color: green; 
+	color: yellow; 
 }
 
 /*nav a{
@@ -351,4 +351,375 @@ legend{
     height: 40px;
   }
 }
+/*hero section styling: 
+	The hero uses a warm gradient and rounded corners that visually separates it from the rest of the 
+	page and make the blog introduction feel like a card at the top*/
+.hero {
+    background: linear-gradient(135deg, #ff8c00, #ffd9b3);
+    color: #2f1500;
+    padding: 3rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+/* a flex container w/ content aligned to the right so login button and status sits visually at the top right
+similar to where it is in the to-do page*/
+.hero-login-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
 
+/*login button for hero
+why?: 
+I styled it as a pill so users see it immediately and know how to log in*/
+.hero-login-button {
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    background-color: #fff8dc;
+    color: #d2691e;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #d2691e;
+}
+
+/*with any button on my page, i liked to have the hover option so the user knows they are about 
+to select it*/
+.hero-login-button:hover {
+    background-color: #ffd9b3;
+    color: #000;
+}
+/*this changes the log in button to look different so user knows that they are logged in*/
+.hero-login-status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    background-color: #fff8dc;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/*hero content container: 
+	constrains hero content width for better readability on large screens
+	centers the text to match the intro/landing feeling of this section*/
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*hero main title: larger font to clearly distinguish the page*/
+.hero h1 {
+    margin: 0 0 0.75rem 0;
+    font-size: 2.2rem;
+}
+
+/*slight italics/ medium weight to differentiate it from the regular body text and make it feel like a 
+subtitle*/
+.hero-tagline {
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+/* I use this flexbocx to display the main content and sidebar next to each other on wider screens*/
+.blog-content-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* I give the main blog column more space (flex: 3) so posts can take priority
+column flex also keeps multiple posts evenly spaces*/
+.blog-main {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/*individual blog post card: 
+I use this to give the posts a card-style appearance + make them distinct from each other*/
+.blog-post {
+    background-color: #fffaf0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.blog-post h2 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+}
+
+/*why do I have this? the date is more secondary to the main content so 
+it makes it smaller/less noticable but still there; the rem aspect is 
+font size relative to the root element so for instance the text within the post card*/
+.blog-date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+/*blog sidebar styling: 
+flex gives the sidebar less width than the main content.  Matching the backgrounds/card styling
+visually links it to posts while still using the left border and outer shadow.
+The height element ensure thta it only grows as tall as its contents*/
+.blog-sidebar {
+    flex: 1;
+    padding: 1.25rem;
+    border-left: 1px solid #ccc;
+    background-color: #fffaf0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+
+.blog-sidebar h2 {
+    margin-top: 0;
+}
+
+/*why have this? remove the default styling to the list looks like a clean nav menue*/
+.blog-post-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.blog-post-list li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-list a {
+    text-decoration: none;
+    color: #191970;
+}
+
+
+/*this is for the responsive layout for smaller screens.
+On narrow screens, stack the main content and sidebar vertically for better readability.  
+Also replace the left border w/ a top border so the visual represenation still makes sense in vertical
+layout*/
+@media (max-width: 800px) {
+    .blog-content-wrapper {
+        flex-direction: column;
+    }
+
+    .blog-sidebar {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+}
+
+
+.blog-actions {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+
+/*for add new post*/
+.add-post-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #d2691e;
+    color: #fff8dc;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.add-post-button:hover {
+    background-color: #a0522d;
+}
+
+/*red tinted background/border clearly signalling an error.
+also has rounded corners/margin to keep it consistent w/ card-style components*/
+.error-messages {
+    background-color: #ffe6e6;
+    border: 1px solid #ff9999;
+    color: #660000;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.blog-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+/*delete post button. red color scheme to show user that it will destroy something*/
+.delete-post-button {
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #b22222;
+    color: #fffaf0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.delete-post-button:hover {
+    background-color: #7f1515;
+}
+
+/*this is for the collapsed content.  Why?: limit the height/hide overflow so long posts
+only show a teaser by default. blog.js toggles this class to reveal/hide full content*/
+.blog-post-content.collapsed {
+    max-height: 2rem;   
+    overflow: hidden;
+}
+
+
+.toggle-content-button {
+    margin-top: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #d2691e;
+    background-color: #fff8dc;
+    color: #333;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.toggle-content-button:hover {
+    background-color: #ffd9b3;
+}
+
+
+.blog-theme-toggle {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/*toggle the theme button*/
+#theme-toggle-button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 2px solid #333;
+    background-color: #fffaf0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#theme-toggle-button:hover {
+    background-color: #ffe4c4;
+}
+
+
+#blog-controls {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+#blog-controls label {
+    font-weight: 600;
+}
+
+/*inputs in side bar controls. Why?: full-width inputs to make scanning/interaction easier in a narrow sidebar
+the box sizing ensures that padding doesn't break layout width*/
+#blog-controls input[type="text"],
+#blog-controls select {
+    width: 100%;
+    padding: 0.25rem;
+    margin-top: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/*container for edit/delete buttons to keep groups aligned*/
+.blog-post-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+
+.edit-post-button {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #0066cc;
+    background-color: #e6f0ff;
+    color: #004080;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.edit-post-button:hover {
+    background-color: #cce0ff;
+  
+}
+
+/*top border separates comments visually from the main post content and the 
+margin and padding give the comments its own space*/
+.comments-section {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #ddd;
+}
+
+.comments-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+/*removes the bullet styling, and default padding to make comments look stacked*/
+.comment-list {
+    list-style-type: none;
+    margin: 0 0 0.75rem 0;
+    padding: 0;
+}
+
+/*single comment card*/
+.comment {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #fffaf0;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+/*information about the comments*/
+.comment-meta {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.comment-date {
+    margin-left: 0.35rem;
+    font-style: italic;
+}
+
+.comment-text {
+    margin: 0;
+}
+
+/*no comments message*/
+.no-comments {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/*comment form*/
+.comment-form p {
+    margin: 0.4rem 0;
+}
+
+/*styling the comment form inputs*/
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
