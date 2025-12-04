@@ -32,7 +32,7 @@
 <body>
 
 	<div class="body_wrapper">
-	<?php include 'nav.php' ?>
+	<?php include 'includes/nav.php' ?>
 	<main class="page-body">
 	
 	<br><br><br>
@@ -42,7 +42,7 @@
 	<script src="1-marketplace.js"></script>
 	</main>
 	
-	<?php include 'footer.php'?>
+	<?php include 'includes/footer.php' ?>
 	</div>
 	
 </body>
