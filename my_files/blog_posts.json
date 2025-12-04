@@ -1,0 +1,50 @@
+{
+    "posts": [
+        {
+            "id": "irst-post-1764271693",
+            "title": "First post",
+            "date": "2025-11-27",
+            "paragraphs": [
+                "This is my first post on the blog.\r\nThe draft can be saved, you may comment and even search which posts you want to find."
+            ],
+            "comments": [
+                {
+                    "name": "Tristan",
+                    "text": "Nice",
+                    "date": "2025-11-27"
+                }
+            ]
+        },
+        {
+            "id": "post-1764271716",
+            "title": "JSON",
+            "date": "2025-11-27",
+            "paragraphs": [
+                "All of these posts\/comments are stored in a json file"
+            ]
+        },
+        {
+            "id": "xam-1764271753",
+            "title": "Exam",
+            "date": "2025-11-27",
+            "paragraphs": [
+                "I'm trying to finish this website very quickly so I can study for my exams as soon as possible."
+            ],
+            "comments": [
+                {
+                    "name": "Tristan",
+                    "text": "I have 4 exams.",
+                    "date": "2025-11-27"
+                }
+            ]
+        },
+        {
+            "id": "m-about-to-turn-this-lab-in-1764853255",
+            "title": "I'm about to turn this lab in",
+            "date": "2025-12-04",
+            "paragraphs": [
+                "I'm about to go make the pull request and put this website on osiris.  I've been working on some other classes and tweaking this website just a bit.  It was a fun semester!"
+            ]
+        }
+    ]
+}
