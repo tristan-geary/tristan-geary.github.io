@@ -1,0 +1,209 @@
+
+
+/*dark themes overrides for the site
+this file sits on top of my main stylesheet and only changes colors/shadows */
+@import url("my_style.css");
+
+
+body {
+    background-color: #101015;
+    color: #f5f5f5;
+}
+
+
+a:link,
+a:visited {
+    color: #ffd18b;
+}
+
+a:hover {
+    color: #7be0a2;
+}
+
+
+
+.topnav {
+    background-color: #20202a;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.topnav a,
+.topnav .dropbtn {
+    color: #f9f9f9;
+}
+
+.dropdown-content {
+    background-color: #20202a;
+}
+
+
+
+.page-body {
+    background-color: #101015;
+}
+
+/*replace the original light gradient w/ a darker radial gradient that still keeps
+a warm highligh in the top left */
+.hero {
+	
+    background: radial-gradient(circle at top left,
+                                #ffb347 0,
+                                #2a2a3a 45%,
+                                #101015 100%);
+    color: #fdf5e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+
+/*use lighter dark panels for content blocks so they are readable against global background*/
+.blog-post,
+.blog-sidebar {
+    background-color: #181820;
+    color: #f5f5f5;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.blog-date {
+    color: #bbbbbb;
+}
+
+
+/*keep same button shapes, but just change the colors to work against backgrounds*/
+.add-post-button {
+    background-color: #ffb347;
+    color: #1b1208;
+    border: none;
+}
+
+.add-post-button:hover {
+    background-color: #ffcf7b;
+    color: #1b1208;
+}
+
+.delete-post-button {
+    background-color: #cc4444;
+    color: #fffaf0;
+}
+
+.delete-post-button:hover {
+    background-color: #a52a2a;
+}
+
+.hero-login-button {
+    background-color: #2b2b36;
+    color: #f5f5f5;
+    border: 2px solid #ffb347;
+}
+
+.hero-login-button:hover {
+    background-color: #3a3a4a;
+    color: #ffffff;
+}
+
+/*neutral dark backgrounds w/ accent border keeps these buttons visually secondary but still
+ interactive*/
+#theme-toggle-button,
+.toggle-content-button {
+    background-color: #2b2b36;
+    color: #f5f5f5;
+    border: 1px solid #ffb347;
+}
+
+#theme-toggle-button:hover,
+.toggle-content-button:hover {
+    background-color: #3b3b4b;
+}
+
+/*backgrounds w/ light text keep the form usable in dark mode.
+Slight border so inputs don't blend into sidebar*/
+#blog-controls input[type="text"],
+#blog-controls select {
+    background-color: #262633;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+
+
+/*form fields*/
+fieldset {
+    background-color: #181820;
+    border-color: #444;
+}
+
+legend {
+    background-color: #252535;
+    border-color: #ffb347;
+    color: #f5f5f5;
+}
+
+
+
+.site-footer {
+    background-color: #20202a;
+    color: #dddddd;
+}
+
+
+
+
+.comment {
+    background-color: #222230;
+    border-color: #444;
+    color: #f5f5f5;
+}
+
+.comment-meta {
+    color: #cccccc;
+}
+
+.comment-text {
+    color: #f5f5f5;
+}
+
+.comment-date {
+    color: #bbbbbb;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    background-color: #262633;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+
+.blog-post-list a {
+    color: #ffd18b;
+}
+
+.blog-post-list a:hover {
+    color: #7be0a2;
+}
+
+
+.comments-section {
+    border-top: 1px solid #444;
+}
+
+
+.comments-section h3 {
+    color: #f5f5f5;
+}
+
+
+.no-comments {
+    color: #cccccc;
+}
+
+
+form p {
+    color: #f5f5f5;
+}
